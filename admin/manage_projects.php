@@ -44,6 +44,8 @@ $result = $conn->query("SELECT * FROM projects ORDER BY id DESC");
       <a href="../index.php">Home</a>
       <a href="manage_projects.php">Projects</a>
       <a href="manage_contacts.php">Contacts</a>
+      <a href="manage_credentials.php">Credentials</a>
+
       <a href="logout.php">Logout</a>
     </nav>
   </header>

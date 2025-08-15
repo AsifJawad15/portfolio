@@ -22,6 +22,7 @@
       <a href="#skills">Skills</a>
       <a href="projects.php">Projects</a>
       <a href="contact.php">Contact</a>
+      <a href="credentials.php">Credentials</a>
       <a href="admin/login.php">Admin</a>
     </nav>
   </header>

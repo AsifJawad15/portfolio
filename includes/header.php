@@ -15,6 +15,7 @@
                 <li><a href="index.php">Home</a></li>
                 <li><a href="projects.php">Projects</a></li>
                 <li><a href="contact.php">Contact</a></li>
+                <li><a href="credentials.php">Credential</a></li>
                 <li><a href="admin/login.php">Admin</a></li>
             </ul>
         </nav>

@@ -8,6 +8,7 @@ include '../includes/config.php';
 
 $projectCount = $conn->query("SELECT COUNT(*) AS cnt FROM projects")->fetch_assoc()['cnt'];
 $contactCount = $conn->query("SELECT COUNT(*) AS cnt FROM contacts")->fetch_assoc()['cnt'];
+$credCount = $conn->query("SELECT COUNT(*) AS cnt FROM credentials")->fetch_assoc()['cnt'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -71,6 +72,7 @@ $contactCount = $conn->query("SELECT COUNT(*) AS cnt FROM contacts")->fetch_asso
     <nav class="navbar">
       <a href="dashboard.php">Dashboard</a>
       <a href="manage_projects.php">Projects</a>
+      <a href="manage_credentials.php">Credentials</a>
       <a href="manage_contacts.php">Contacts</a>
       <a href="../index.php">Back</a>
       <a href="logout.php">Logout</a>
@@ -80,12 +82,16 @@ $contactCount = $conn->query("SELECT COUNT(*) AS cnt FROM contacts")->fetch_asso
   <!-- DASHBOARD CONTENT -->
   <main style="margin-top:80px; padding:0 10%;">
     <h2>Welcome to the Admin Dashboard</h2>
-    <p>Use the links in the navbar to manage projects and contacts.</p>
+    <p>Use the links in the navbar to manage projects, credentials and contacts.</p>
 
     <div class="dashboard">
       <div class="card">
         <h3>Total Projects</h3>
         <p><?php echo $projectCount; ?></p>
+      </div>
+      <div class="card">
+        <h3>Total Credentials</h3>
+        <p><?php echo $credCount; ?></p>
       </div>
       <div class="card">
         <h3>Total Contacts</h3>
@@ -96,6 +102,8 @@ $contactCount = $conn->query("SELECT COUNT(*) AS cnt FROM contacts")->fetch_asso
     <section class="actions">
       <a href="add_project.php"><i class='bx bx-plus'></i> Add New Project</a>
       <a href="manage_projects.php"><i class='bx bx-task'></i> Manage Projects</a>
+      <a href="add_credential.php"><i class='bx bx-plus'></i> Add Credential</a>
+      <a href="manage_credentials.php"><i class='bx bx-task'></i> Manage Credentials</a>
       <a href="manage_contacts.php"><i class='bx bx-message-square-detail'></i> View Contacts</a>
     </section>
   </main>
