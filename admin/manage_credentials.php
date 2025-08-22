@@ -25,6 +25,7 @@ $result = $conn->query("SELECT * FROM credentials ORDER BY id DESC");
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
+  
   <style>
     .credentials-grid { display: grid; grid-template-columns: repeat(3,1fr); gap:20px; margin-top:20px; }
     .credential-card {
@@ -50,17 +51,10 @@ $result = $conn->query("SELECT * FROM credentials ORDER BY id DESC");
   </style>
 </head>
 <body>
-  <!-- ADMIN NAVBAR -->
-  <header class="header">
-    <a href="../index.php" class="logo">Admin Panel</a>
-    <nav class="navbar">
-      <a href="../index.php">Home</a>
-      <a href="manage_projects.php">Projects</a>
-      <a href="manage_credentials.php">Credentials</a>
-      <a href="manage_contacts.php">Contacts</a>
-      <a href="logout.php">Logout</a>
-    </nav>
-  </header>
+<?php
+
+include __DIR__ . '/partials/admin_header.php';
+?>
 
   <main style="margin-top:80px; padding:0 10%;">
     <h2>Manage Credentials</h2>
@@ -91,5 +85,8 @@ $result = $conn->query("SELECT * FROM credentials ORDER BY id DESC");
   </main>
 
   <script src="../script.js"></script>
+  <?php
+include __DIR__ . '/partials/admin_footer.php';
+?>
 </body>
 </html>

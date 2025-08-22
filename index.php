@@ -1,4 +1,12 @@
-<!-- index.php -->
+<?php
+include 'includes/config.php';
+$res = $conn->query("SELECT * FROM skills ORDER BY category, sort_order, id");
+$skills_by_cat = [];
+while ($r = $res->fetch_assoc()) {
+    $skills_by_cat[$r['category']][] = $r;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -94,62 +102,30 @@
       </div>
     </div>
   </section>
-  <!-- SKILLS SECTION -->
-  <section id="skills" class="skills">
-    <h2 class="section-title">My Skills</h2>
-    <div class="skills-content">
-      <div class="skill-box">
-        <h3>Programming</h3>
-        <div class="skill">
-          <span>Python</span>
-          <div class="skill-bar"><div class="skill-per" data-per="90%"></div></div>
+ <!-- SKILLS SECTION -->
+<section id="skills" class="skills">
+  <h2 class="section-title">My Skills</h2>
+  <div class="skills-content">
+    <?php if (empty($skills_by_cat)): ?>
+      <p style="text-align:center">No skills added yet.</p>
+    <?php else: ?>
+      <?php foreach ($skills_by_cat as $category => $items): ?>
+        <div class="skill-box">
+          <h3><?php echo htmlspecialchars($category); ?></h3>
+          <?php foreach ($items as $skill): ?>
+            <div class="skill">
+              <span><?php echo htmlspecialchars($skill['name']); ?></span>
+              <div class="skill-bar">
+                <div class="skill-per" data-per="<?php echo (int)$skill['percentage']; ?>%"></div>
+              </div>
+            </div>
+          <?php endforeach; ?>
         </div>
-        <div class="skill">
-          <span>C++</span>
-          <div class="skill-bar"><div class="skill-per" data-per="85%"></div></div>
-        </div>
-        <div class="skill">
-          <span>JavaScript</span>
-          <div class="skill-bar"><div class="skill-per" data-per="80%"></div></div>
-        </div>
-        <div class="skill">
-          <span>Java</span>
-          <div class="skill-bar"><div class="skill-per" data-per="75%"></div></div>
-        </div>
-        <div class="skill">
-          <span>CSS / HTML</span>
-          <div class="skill-bar"><div class="skill-per" data-per="85%"></div></div>
-        </div>
-        <div class="skill">
-          <span>PHP / SQL</span>
-          <div class="skill-bar"><div class="skill-per" data-per="70%"></div></div>
-        </div>
-      </div>
-      <div class="skill-box">
-        <h3>Professional</h3>
-        <div class="skill">
-          <span>Communication</span>
-          <div class="skill-bar"><div class="skill-per" data-per="90%"></div></div>
-        </div>
-        <div class="skill">
-          <span>Data Analysis</span>
-          <div class="skill-bar"><div class="skill-per" data-per="80%"></div></div>
-        </div>
-        <div class="skill">
-          <span>Problem Solving</span>
-          <div class="skill-bar"><div class="skill-per" data-per="95%"></div></div>
-        </div>
-        <div class="skill">
-          <span>Project Management</span>
-          <div class="skill-bar"><div class="skill-per" data-per="90%"></div></div>
-        </div>
-        <div class="skill">
-          <span>Leadership</span>
-          <div class="skill-bar"><div class="skill-per" data-per="85%"></div></div>
-        </div>
-      </div>
-    </div>
-  </section>
+      <?php endforeach; ?>
+    <?php endif; ?>
+  </div>
+</section>
+
 
   <!-- FOOTER -->
   <footer class="footer">

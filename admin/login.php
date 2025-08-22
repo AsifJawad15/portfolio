@@ -1,22 +1,29 @@
 <?php
+// admin/login.php
 session_start();
 include '../includes/config.php'; // Database connection
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username = $_POST['username'] ?? '';
-    // Simple MD5 hashing; consider stronger hashing like password_hash
+    $username = trim($_POST['username'] ?? '');
+    // NOTE: you're using MD5 in DB — consider migrating to password_hash() later
     $password = md5($_POST['password'] ?? '');
 
-    $stmt = $conn->prepare("SELECT * FROM admin_users WHERE username = ? AND password = ?");
+    $stmt = $conn->prepare("SELECT id, username FROM admin_users WHERE username = ? AND password = ? LIMIT 1");
     $stmt->bind_param("ss", $username, $password);
     $stmt->execute();
     $res = $stmt->get_result();
 
-    if ($res->num_rows > 0) {
-        $_SESSION['admin'] = $username;
-        header("Location: manage_projects.php");
+    if ($row = $res->fetch_assoc()) {
+        // Successful login
+        session_regenerate_id(true);
+        $_SESSION['admin'] = $row['username']; // or use id: $_SESSION['admin_id'] = $row['id'];
+
+        $stmt->close();
+        // Redirect to dashboard (not manage_projects)
+        header("Location: dashboard.php");
         exit();
     } else {
+        $stmt->close();
         $error = "Invalid username or password.";
     }
 }
@@ -27,28 +34,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <meta charset="UTF-8">
   <title>Admin Login</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-  <!-- ADMIN NAVBAR -->
-  <header class="header">
-    <a href="../index.php" class="logo">Admin Panel</a>
-    <i class='bx bx-menu' id="menu-icon"></i>
-    <nav class="navbar">
-      <a href="../index.php">Home</a>
-      <a href="manage_projects.php">Projects</a>
-      <a href="manage_contacts.php">Contacts</a>
-      <a href="logout.php">Logout</a>
-    </nav>
-  </header>
 
-  <!-- LOGIN FORM -->
+  <!-- LOGIN FORM (no admin header here) -->
   <main style="margin-top:80px; padding:0 10%;">
     <h2>Admin Login</h2>
     <?php if(isset($error)): ?>
-      <p class="error"><?php echo $error; ?></p>
+      <p class="error"><?php echo htmlspecialchars($error); ?></p>
     <?php endif; ?>
     <form method="POST">
       <label>Username:</label>

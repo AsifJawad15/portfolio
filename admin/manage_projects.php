@@ -37,18 +37,10 @@ $result = $conn->query("SELECT * FROM projects ORDER BY id DESC");
   </style>
 </head>
 <body>
-  <!-- ADMIN NAVBAR -->
-  <header class="header">
-    <a href="../index.php" class="logo">Admin Panel</a>
-    <nav class="navbar">
-      <a href="../index.php">Home</a>
-      <a href="manage_projects.php">Projects</a>
-      <a href="manage_contacts.php">Contacts</a>
-      <a href="manage_credentials.php">Credentials</a>
+ <?php
 
-      <a href="logout.php">Logout</a>
-    </nav>
-  </header>
+include __DIR__ . '/partials/admin_header.php';
+?>
   <main style="margin-top:80px; padding:0 10%;">
     <h2>Manage Projects</h2>
     <p><a class="btn" href="add_project.php">Add New Project</a></p>
@@ -72,5 +64,8 @@ $result = $conn->query("SELECT * FROM projects ORDER BY id DESC");
     </div>
   </main>
   <script src="../script.js"></script>
+  <?php
+include __DIR__ . '/partials/admin_footer.php';
+?>
 </body>
 </html>

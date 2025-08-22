@@ -59,16 +59,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   </style>
 </head>
 <body>
-  <header class="header">
-    <a href="../index.php" class="logo">Admin Panel</a>
-    <nav class="navbar">
-      <a href="../index.php">Home</a>
-      <a href="manage_projects.php">Projects</a>
-      <a href="manage_credentials.php">Credentials</a>
-      <a href="manage_contacts.php">Contacts</a>
-      <a href="logout.php">Logout</a>
-    </nav>
-  </header>
+<?php
+
+include __DIR__ . '/partials/admin_header.php';
+?>
 
   <main>
     <h2>Edit Credential</h2>
@@ -96,5 +90,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   </main>
 
   <script src="../script.js"></script>
+  <?php
+include __DIR__ . '/partials/admin_footer.php';
+?>
 </body>
 </html>
