@@ -35,12 +35,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <nav class="navbar">
       <a href="index.php">Home</a>
       <a href="projects.php">Projects</a>
-      <a href="contact.php">Contact</a>
+      <a href="credentials.php">Credential</a>
       <a href="admin/login.php">Admin</a>
     </nav>
   </header>
 
-  <section style="margin-top:80px; padding:0 10%;">
+  <main style="flex: 1; margin-top:80px; padding:0 10%;">
     <h2>Contact Me</h2>
     <?php if(isset($successMsg)) echo "<p class='success'>$successMsg</p>"; ?>
     <?php if(isset($errorMsg)) echo "<p class='error'>$errorMsg</p>"; ?>
@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
       <button type="submit">Send Message</button>
     </form>
-  </section>
+  </main>
 
   <footer class="footer">
     <div class="social">

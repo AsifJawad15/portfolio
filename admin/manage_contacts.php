@@ -29,14 +29,14 @@ $result = $conn->query("SELECT * FROM contacts ORDER BY id DESC");
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+<body class="admin-dark">
 
 <?php
 
 include __DIR__ . '/partials/admin_header.php';
 ?>
 
-<main style="margin-top:100px; padding:20px 5%;">
+<main style="flex: 1; margin-top:100px; padding:20px 5%;">
   <h2>Manage Contacts</h2>
 
   <table>

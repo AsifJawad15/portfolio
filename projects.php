@@ -10,23 +10,80 @@
   <link rel="stylesheet" href="css/style.css">
   <style>
     .project-container { display: grid; grid-template-columns: repeat(3,1fr); gap:20px; margin-top:40px; }
-    .project-card { background:#fff; border:1px solid #ddd; border-radius:4px; padding:20px;
-      transition:transform .3s, box-shadow .3s, background .3s; }
-    .project-card:hover { transform:translateY(-5px); background:#f7f7ff;
-      box-shadow:0 0 20px rgba(122,115,209,0.8); }
-    .project-card img { width:100%; height:auto; border-radius:4px; margin-bottom:15px; }
-    .github-btn { display:inline-flex; align-items:center; padding:8px 12px; 
-      background:linear-gradient(45deg,#7A73D1,#B5A8D5); color:#fff; border-radius:4px; }
-    .github-btn:hover { background:linear-gradient(45deg,#B5A8D5,#7A73D1); }
+    .project-card { 
+      background:#2d2d2d; 
+      border:1px solid #444; 
+      border-radius:8px; 
+      padding:20px;
+      transition:transform .3s, box-shadow .3s, background .3s; 
+      overflow: hidden;
+      color: #e0e0e0;
+    }
+    .project-card:hover { 
+      transform:translateY(-8px); 
+      background:#3d3d3d;
+      box-shadow:0 8px 25px rgba(181,168,213,0.3); 
+      border-color: #B5A8D5;
+    }
+    .project-card .image-container {
+      overflow: hidden;
+      border-radius: 6px;
+      margin-bottom: 15px;
+    }
+    .project-card img { 
+      width:100%; 
+      height:200px; 
+      object-fit: cover;
+      border-radius:6px; 
+      transition: transform 0.4s ease;
+    }
+    .project-card:hover img {
+      transform: scale(1.1);
+    }
+    .project-card h3 {
+      color: #B5A8D5;
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+    .project-card p {
+      color: #e0e0e0;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+    .github-btn { 
+      display:inline-flex; 
+      align-items:center; 
+      gap: 6px;
+      padding:10px 16px; 
+      background:linear-gradient(45deg,#7A73D1,#B5A8D5); 
+      color:#fff; 
+      border-radius:6px; 
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    .github-btn:hover { 
+      background:linear-gradient(45deg,#B5A8D5,#7A73D1); 
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(181,168,213,0.4);
+    }
+    .github-btn i {
+      font-size: 1.1rem;
+    }
+    @media (max-width: 768px) {
+      .project-container { grid-template-columns: repeat(2,1fr); gap:15px; }
+    }
+    @media (max-width: 480px) {
+      .project-container { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
   <header class="header">
     <a href="index.php" class="logo">Asif Jawad</a>
     <nav class="navbar">
+      
       <a href="index.php">Home</a>
-       <a href="index.php">About</a>
-      <a href="projects.php">Projects</a>
       <a href="contact.php">Contact</a>
       <a href="credentials.php">Credential</a>
       <a href="admin/login.php">Admin</a>
@@ -59,8 +116,14 @@
       ?>
     </div>
   </section>
-  <footer class="footer">
-    <p>© 2025 – All Rights Reserved</p>
+<footer class="footer">
+    <div class="social">
+      <a href="#"><i class='bx bxl-linkedin'></i></a>
+      <a href="#"><i class='bx bxl-github'></i></a>
+      <a href="#"><i class='bx bxl-facebook'></i></a>
+      <a href="#"><i class='bx bxl-instagram'></i></a>
+    </div>
+    <p>© 2025 - All Rights Reserved</p>
   </footer>
   <script src="script.js"></script>
 </body>

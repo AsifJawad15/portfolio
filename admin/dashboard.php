@@ -19,7 +19,7 @@ $skillCount = $conn->query("SELECT COUNT(*) AS cnt FROM skills")->fetch_assoc()[
     <title>Admin Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <style>
         /* General padding */
         main { 
@@ -37,8 +37,12 @@ $skillCount = $conn->query("SELECT COUNT(*) AS cnt FROM skills")->fetch_assoc()[
 
         /* Welcome text styles */
         .welcome h2 { 
-            color: #211C84; 
+            color: #B5A8D5; 
             font-size: 28px;
+        }
+
+        .welcome p {
+            color: #e0e0e0;
         }
 
         /* Logout button styles */
@@ -66,33 +70,46 @@ $skillCount = $conn->query("SELECT COUNT(*) AS cnt FROM skills")->fetch_assoc()[
 
         /* Admin Card Styles */
         .admin-card {
-            background: #f4f4f4;
+            background: #2d2d2d;
             padding: 30px;
             border-radius: 10px;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+            color: #e0e0e0;
+            text-decoration: none;
+            border: 1px solid #444;
         }
 
         .admin-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
+            background: #3d3d3d;
+            box-shadow: 0 8px 25px rgba(181,168,213,0.3);
+            border-color: #B5A8D5;
         }
 
         .admin-card .icon {
             font-size: 50px;
-            color: #7A73D1;
+            color: #B5A8D5;
+            transition: transform 0.3s ease;
+        }
+
+        .admin-card:hover .icon {
+            transform: scale(1.1);
         }
 
         .admin-card .title {
             font-size: 24px;
             margin-top: 10px;
             font-weight: bold;
+            color: #e0e0e0;
         }
 
         .admin-card .count {
             font-size: 30px;
-            color: #333;
+            color: #B5A8D5;
             margin-top: 5px;
+            font-weight: bold;
         }
 
         /* Responsive tweaks */
@@ -111,7 +128,7 @@ $skillCount = $conn->query("SELECT COUNT(*) AS cnt FROM skills")->fetch_assoc()[
         }
     </style>
 </head>
-<body>
+<body class="admin-dark">
 <main>
     <div class="welcome">
         <div>
