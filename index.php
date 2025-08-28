@@ -25,9 +25,7 @@ while ($r = $res->fetch_assoc()) {
     <a href="index.php" class="logo">Asif Jawad</a>
     <i class='bx bx-menu' id="menu-icon"></i>
     <nav class="navbar">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
+      
       <a href="projects.php">Projects</a>
       <a href="contact.php">Contact</a>
       <a href="credentials.php">Credentials</a>
