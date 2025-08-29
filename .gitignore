@@ -1,0 +1,6 @@
+# Ignore problematic Windows files
+NUL
+CON
+PRN
+AUX
+*.tmp
