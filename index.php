@@ -42,10 +42,7 @@ while ($r = $res->fetch_assoc()) {
       <h3>Hello, I'm</h3>
       <h1>Asif Jawad</h1>
       <h3>And I'm a <span class="multiple-text"></span></h3>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-        Veritatis, dolorum suscipit quas totam dignissimos nulla!
-      </p>
+      
       <div class="social-media">
         <a href="https://www.linkedin.com/in/asif-jawad-592461355/" target="_blank"><i class='bx bxl-linkedin'></i></a>
         <a href="https://github.com/AsifJawad15" target="_blank"><i class='bx bxl-github'></i></a>
@@ -61,21 +58,28 @@ while ($r = $res->fetch_assoc()) {
   <!-- ABOUT SECTION -->
   <section id="about" class="about">
     <h2 class="section-title">About Me</h2>
-    <div class="about-center">
-      <!-- Your centered photo -->
-      <img class="about-photo" src="images/me.jpg" alt="Asif Jawad">
+    <div class="about-content">
+      <!-- Left side - Text content -->
+      <div class="about-text">
+        <p>As a passionate Computer Science and Engineering graduate, I bring a strong foundation in software development, problem-solving, and modern technologies. I thrive on creating innovative solutions that bridge the gap between complex technical challenges and user-friendly applications.</p>
+        
+        <!-- Email line -->
+        <div class="about-email">
+          <i class='bx bx-at'></i>
+          <span>asifjawadaj15@gmail.com</span>
+        </div>
 
-      <!-- Email line (no hover) -->
-      <div class="about-email">
-        <i class='bx bx-at'></i>
-        <span>Email: asifjawadaj15@gmail.com</span>
+        <!-- Contact Me button -->
+        <a href="contact.php" class="about-contact">
+          <i class='bx bx-message-square-detail'></i>
+          <span>Contact Me</span>
+        </a>
       </div>
 
-      <!-- Contact Me button/link -->
-      <a href="contact.php" class="about-contact">
-        <i class='bx bx-message-square-detail'></i>
-        <span>Contact Me</span>
-      </a>
+      <!-- Right side - Photo -->
+      <div class="about-image">
+        <img class="about-photo" src="images/me.jpg" alt="Asif Jawad">
+      </div>
     </div>
   </section>
  <!-- EDUCATION SECTION -->
