@@ -23,8 +23,9 @@
     .cred-card:hover {
       transform: translateY(-8px);
       background: #3d3d3d;
-      box-shadow: 0 8px 25px rgba(181,168,213,0.3);
-      border-color: #B5A8D5;
+      border: 2px solid;
+      border-image: linear-gradient(45deg, #00bfff, #8a2be2, #9932cc) 1;
+      box-shadow: 0 0 20px rgba(0, 191, 255, 0.5), 0 0 30px rgba(138, 43, 226, 0.3), 0 0 40px rgba(153, 50, 204, 0.2);
     }
     .cred-card .image-container {
       overflow: hidden;
