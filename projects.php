@@ -56,17 +56,20 @@
       align-items:center; 
       gap: 6px;
       padding:10px 16px; 
-      background:linear-gradient(45deg,#7A73D1,#B5A8D5); 
+      background: linear-gradient(45deg, rgba(0, 191, 255, 0.8), rgba(138, 43, 226, 0.8));
+      backdrop-filter: blur(10px);
       color:#fff; 
       border-radius:6px; 
       text-decoration: none;
       font-weight: 500;
       transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 191, 255, 0.3);
     }
     .github-btn:hover { 
-      background:linear-gradient(45deg,#B5A8D5,#7A73D1); 
+      border: 2px solid;
+      border-image: linear-gradient(45deg, #00bfff, #8a2be2, #9932cc) 1;
+      box-shadow: 0 0 20px rgba(0, 191, 255, 0.5), 0 0 30px rgba(138, 43, 226, 0.3), 0 0 40px rgba(153, 50, 204, 0.2);
       transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(181,168,213,0.4);
     }
     .github-btn i {
       font-size: 1.1rem;

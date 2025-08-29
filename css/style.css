@@ -137,19 +137,20 @@ body {
 /* BUTTONS */
 .btn {
   display: inline-block;
-  background: linear-gradient(45deg, #7A73D1, #B5A8D5);
+  background: linear-gradient(45deg, rgba(0, 191, 255, 0.8), rgba(138, 43, 226, 0.8));
+  backdrop-filter: blur(10px);
   color: #fff;
   padding: 10px 20px;
   margin-top: 15px;
   border-radius: 4px;
   text-decoration: none;
   transition: 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 191, 255, 0.3);
 }
 .btn:hover {
   border: 2px solid;
   border-image: linear-gradient(45deg, #00bfff, #8a2be2, #9932cc) 1;
   box-shadow: 0 0 20px rgba(0, 191, 255, 0.5), 0 0 30px rgba(138, 43, 226, 0.3), 0 0 40px rgba(153, 50, 204, 0.2);
-  background: linear-gradient(45deg, #B5A8D5, #7A73D1);
 }
 
 /* FOOTER */
@@ -215,17 +216,18 @@ form textarea:focus {
   outline: none;
 }
 form button {
-  background: linear-gradient(45deg, #7A73D1, #B5A8D5);
+  background: linear-gradient(45deg, rgba(0, 191, 255, 0.8), rgba(138, 43, 226, 0.8));
+  backdrop-filter: blur(10px);
   color: #fff;
   border: none;
   padding: 10px;
   cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 191, 255, 0.3);
 }
 form button:hover {
   border: 2px solid;
   border-image: linear-gradient(45deg, #00bfff, #8a2be2, #9932cc) 1;
   box-shadow: 0 0 20px rgba(0, 191, 255, 0.5), 0 0 30px rgba(138, 43, 226, 0.3), 0 0 40px rgba(153, 50, 204, 0.2);
-  background: linear-gradient(45deg, #B5A8D5, #7A73D1);
 }
 
 /* MESSAGES */
@@ -259,14 +261,15 @@ form button:hover {
   border-radius: 4px;
   text-decoration: none;
   color: #fff;
-  background: linear-gradient(45deg, #7A73D1, #B5A8D5);
+  background: linear-gradient(45deg, rgba(0, 191, 255, 0.8), rgba(138, 43, 226, 0.8));
+  backdrop-filter: blur(10px);
   transition: background 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 191, 255, 0.3);
 }
 .github-btn:hover {
   border: 2px solid;
   border-image: linear-gradient(45deg, #00bfff, #8a2be2, #9932cc) 1;
   box-shadow: 0 0 20px rgba(0, 191, 255, 0.5), 0 0 30px rgba(138, 43, 226, 0.3), 0 0 40px rgba(153, 50, 204, 0.2);
-  background: linear-gradient(45deg, #B5A8D5, #7A73D1);
 }
 .github-btn i {
   margin-right: 5px;
@@ -534,15 +537,16 @@ form button:hover {
 }
 
 .admin-dark form button {
-  background: linear-gradient(45deg, #211C84, #7A73D1) !important;
+  background: linear-gradient(45deg, rgba(0, 191, 255, 0.8), rgba(138, 43, 226, 0.8)) !important;
+  backdrop-filter: blur(10px) !important;
   color: #fff !important;
+  box-shadow: 0 4px 15px rgba(0, 191, 255, 0.3) !important;
 }
 
 .admin-dark form button:hover {
   border: 2px solid;
   border-image: linear-gradient(45deg, #00bfff, #8a2be2, #9932cc) 1 !important;
   box-shadow: 0 0 20px rgba(0, 191, 255, 0.5), 0 0 30px rgba(138, 43, 226, 0.3), 0 0 40px rgba(153, 50, 204, 0.2) !important;
-  background: linear-gradient(45deg, #7A73D1, #211C84) !important;
 }
 
 .admin-dark footer {

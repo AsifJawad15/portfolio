@@ -49,10 +49,19 @@ $skillCount = $conn->query("SELECT COUNT(*) AS cnt FROM skills")->fetch_assoc()[
         .logout-btn {
             text-align: left;
             padding: 10px;
-            background: #7A73D1;
+            background: linear-gradient(45deg, rgba(0, 191, 255, 0.8), rgba(138, 43, 226, 0.8));
+            backdrop-filter: blur(10px);
             color: #fff;
             border-radius: 6px;
             text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0, 191, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .logout-btn:hover {
+            border: 2px solid;
+            border-image: linear-gradient(45deg, #00bfff, #8a2be2, #9932cc) 1;
+            box-shadow: 0 0 20px rgba(0, 191, 255, 0.5), 0 0 30px rgba(138, 43, 226, 0.3), 0 0 40px rgba(153, 50, 204, 0.2);
         }
 
         .logout-btn i {
