@@ -41,6 +41,7 @@ if (!$skill) { header("Location: manage_skills.php"); exit(); }
   <title>Edit Skill</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/admin.css">
 </head>
 <body>
 <?php
@@ -60,7 +61,7 @@ include __DIR__ . '/partials/admin_header.php';
   </form>
   <p><a href="manage_skills.php">Back to Manage Skills</a></p>
 </main>
-<script src="../script.js"></script>
+<script src="../js/admin.js"></script>
 <?php
 include __DIR__ . '/partials/admin_footer.php';
 ?>

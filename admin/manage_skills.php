@@ -25,6 +25,7 @@ $res = $conn->query("SELECT * FROM skills ORDER BY category, sort_order, id");
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/admin.css">
 </head>
 <body>
 
@@ -32,7 +33,7 @@ $res = $conn->query("SELECT * FROM skills ORDER BY category, sort_order, id");
 
 <main style="margin-top:100px;padding:20px 5%;">
   <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
-    <h2 style="margin:0">Manage Skills</h2>
+    <h2 class="section-title" style="margin:0">Manage Skills</h2>
     <!-- Add Skill button next to heading (like Projects page) -->
     <p style="margin:0">
       <a class="btn" href="add_skill.php"><i class="bx bx-plus"></i> Add Skill</a>

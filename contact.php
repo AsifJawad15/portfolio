@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   </header>
 
   <main style="flex: 1; margin-top:80px; padding:0 10%;">
-    <h2>Contact Me</h2>
+    <h2 class="section-title">Contact Me</h2>
     <?php if(isset($successMsg)) echo "<p class='success'>$successMsg</p>"; ?>
     <?php if(isset($errorMsg)) echo "<p class='error'>$errorMsg</p>"; ?>
 
@@ -70,6 +70,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   </footer>
 
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-  <script src="script.js"></script>
+  <script src="js/navigation.js"></script>
 </body>
 </html>

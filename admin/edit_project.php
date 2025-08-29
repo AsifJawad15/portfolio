@@ -50,6 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <!-- Boxicons for icons -->
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/admin.css">
 </head>
 <body>
   <?php
@@ -73,7 +74,7 @@ include __DIR__ . '/partials/admin_header.php';
       <button type="submit">Update Project</button>
     </form>
   </main>
-  <script src="../script.js"></script>
+  <script src="../js/admin.js"></script>
   <?php
 include __DIR__ . '/partials/admin_footer.php';
 ?>

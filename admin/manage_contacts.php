@@ -28,6 +28,7 @@ $result = $conn->query("SELECT * FROM contacts ORDER BY id DESC");
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/admin.css">
 </head>
 <body class="admin-dark">
 
@@ -37,7 +38,7 @@ include __DIR__ . '/partials/admin_header.php';
 ?>
 
 <main style="flex: 1; margin-top:100px; padding:20px 5%;">
-  <h2>Manage Contacts</h2>
+  <h2 class="section-title">Manage Contacts</h2>
 
   <table>
     <thead>

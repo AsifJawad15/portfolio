@@ -142,6 +142,7 @@ while ($r = $res->fetch_assoc()) {
 
   <!-- SCRIPTS -->
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-  <script src="script.js?v=1.0.2"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/home.js"></script>
 </body>
 </html>

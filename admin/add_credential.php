@@ -31,15 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
-  <style>
-    main { margin-top:80px; padding:0 10%; }
-    form { max-width:700px; background:#fff; padding:20px; border-radius:8px; border:1px solid #ddd; }
-    form label { display:block; margin-top:10px; font-weight:600; }
-    form input[type="text"], form textarea { width:100%; padding:8px; border:1px solid #ccc; border-radius:4px; }
-    form button { margin-top:12px; padding:10px 15px; background:#7A73D1; color:#fff; border:none; border-radius:6px; cursor:pointer; }
-    .error { color:#c00; margin-top:8px; }
-    .hint { font-size:0.9rem; color:#666; margin-top:6px; }
-  </style>
+  <link rel="stylesheet" href="../css/admin.css">
 </head>
 <body>
 <?php
@@ -69,6 +61,6 @@ include __DIR__ . '/partials/admin_header.php';
 <?php
 include __DIR__ . '/partials/admin_footer.php';
 ?>
-  <script src="../script.js"></script>
+  <script src="../js/admin.js"></script>
 </body>
 </html>
