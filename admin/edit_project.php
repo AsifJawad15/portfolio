@@ -67,7 +67,7 @@ include __DIR__ . '/partials/admin_header.php';
       <input type="text" name="title" value="<?php echo htmlspecialchars($project['title']); ?>" required>
       <label>Description:</label>
       <textarea name="description" required><?php echo htmlspecialchars($project['description']); ?></textarea>
-      <label>Image Filename (e.g., project1.png):</label>
+      <label>Image Filename:</label>
       <input type="text" name="image" value="<?php echo htmlspecialchars($project['image']); ?>">
       <label>GitHub Link:</label>
       <input type="text" name="github_link" value="<?php echo htmlspecialchars($project['github_link']); ?>">

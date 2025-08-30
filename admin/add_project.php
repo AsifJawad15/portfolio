@@ -63,7 +63,7 @@ include __DIR__ . '/partials/admin_header.php';
       <label>Description:</label>
       <textarea name="description" required></textarea>
 
-      <label>Image Filename (e.g. project2.jpeg):</label>
+      <label>Image Filename:</label>
       <input type="text" name="image">
 
       <label>GitHub Link:</label>
