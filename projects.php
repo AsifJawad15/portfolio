@@ -18,7 +18,6 @@
       <a href="index.php">Home</a>
       <a href="contact.php">Contact</a>
       <a href="credentials.php">Credential</a>
-      <a href="admin/login.php">Admin</a>
     </nav>
   </header>
 

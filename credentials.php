@@ -18,7 +18,6 @@
       <a href="projects.php">Projects</a>
      
       <a href="contact.php">Contact</a>
-      <a href="admin/login.php">Admin</a>
     </nav>
   </header>
 
