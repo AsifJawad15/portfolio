@@ -60,6 +60,8 @@ body {
 
 /* NAVBAR ACTIVE (MOBILE) */
 .navbar.active {
+  display: flex !important;
+  flex-direction: column;
   position: absolute;
   top: 60px;
   left: 0;
@@ -68,6 +70,7 @@ body {
   text-align: center;
   padding: 20px 0;
   border-bottom: 1px solid #444;
+  z-index: 1000;
 }
 .navbar.active a {
   display: block;
@@ -516,6 +519,9 @@ h1, h2, h3, h4, h5, h6 {
   }
   #menu-icon {
     display: block;
+  }
+  .navbar {
+    display: none;
   }
   .about, .education, .skills {
     padding: 40px 5%;
