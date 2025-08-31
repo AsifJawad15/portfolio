@@ -9,6 +9,7 @@
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/credentials.css">
+  <link rel="stylesheet" href="css/cookies.css">
 </head>
 <body>
   <header class="header">
@@ -57,5 +58,6 @@
     <p>© 2025 – All Rights Reserved</p>
   </footer>
   <script src="js/navigation.js"></script>
+  <script src="js/cookies.js"></script>
 </body>
 </html>

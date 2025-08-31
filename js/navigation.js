@@ -16,6 +16,14 @@ document.addEventListener('DOMContentLoaded', function() {
       link.addEventListener("click", () => {
         menuIcon.classList.remove("bx-x");
         navbar.classList.remove("active");
+        
+        // Track navigation clicks (if cookies accepted)
+        if (window.cookieConsent && window.cookieConsent.isEnabled()) {
+          window.cookieConsent.track('navigation_click', {
+            page: link.getAttribute('href'),
+            text: link.textContent
+          });
+        }
       })
     );
   }

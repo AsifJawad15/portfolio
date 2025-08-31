@@ -17,6 +17,7 @@ while ($r = $res->fetch_assoc()) {
   <!-- ICONS & STYLESHEET -->
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css?v=1.0.2">
+  <link rel="stylesheet" href="css/cookies.css">
 </head>
 <body>
 
@@ -143,5 +144,6 @@ while ($r = $res->fetch_assoc()) {
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
   <script src="js/navigation.js"></script>
   <script src="js/home.js"></script>
+  <script src="js/cookies.js"></script>
 </body>
 </html>

@@ -13,6 +13,13 @@ document.addEventListener('DOMContentLoaded', function() {
       backDelay: 1500,
       loop: true
     });
+    
+    // Track typing animation start (if cookies accepted)
+    if (window.cookieConsent && window.cookieConsent.isEnabled()) {
+      window.cookieConsent.track('typed_animation_started', {
+        strings: ["Web Designer", "App Developer", "Problem Solver", "Freelancer", "Data Analyst"]
+      });
+    }
   }
 });
 
