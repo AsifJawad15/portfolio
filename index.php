@@ -78,7 +78,7 @@ while ($r = $res->fetch_assoc()) {
 
       <!-- Right side - Photo -->
       <div class="about-image">
-        <img class="about-photo" src="images/me.jpg" alt="Asif Jawad">
+        <img class="about-photo" src="images/aj.jpg" alt="Asif Jawad">
       </div>
     </div>
   </section>
