@@ -46,6 +46,18 @@ body {
   text-decoration: none;
   font-weight: 500;
   margin-left: 28px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.header .navbar a i {
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+.header .navbar a:hover i {
+  transform: translateY(-2px);
 }
 .header .navbar a:hover {
   color: #B5A8D5;
@@ -73,7 +85,10 @@ body {
   z-index: 1000;
 }
 .navbar.active a {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   margin: 15px 0;
 }
 

@@ -16,9 +16,9 @@
     <a href="index.php" class="logo">Asif Jawad</a>
     <nav class="navbar">
       
-      <a href="index.php">Home</a>
-      <a href="contact.php">Contact</a>
-      <a href="credentials.php">Credential</a>
+      <a href="index.php"><i class='bx bx-home'></i> Home</a>
+      <a href="contact.php"><i class='bx bx-envelope'></i> Contact</a>
+      <a href="credentials.php"><i class='bx bx-award'></i> Credential</a>
     </nav>
   </header>
 

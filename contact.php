@@ -34,9 +34,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <a href="index.php" class="logo">Asif Jawad</a>
     <i class='bx bx-menu' id="menu-icon"></i>
     <nav class="navbar">
-      <a href="index.php">Home</a>
-      <a href="projects.php">Projects</a>
-      <a href="credentials.php">Credential</a>
+      <a href="index.php"><i class='bx bx-home'></i> Home</a>
+      <a href="projects.php"><i class='bx bx-briefcase'></i> Projects</a>
+      <a href="credentials.php"><i class='bx bx-award'></i> Credential</a>
     </nav>
   </header>
 
