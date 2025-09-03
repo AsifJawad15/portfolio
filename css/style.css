@@ -453,13 +453,18 @@ h1, h2, h3, h4, h5, h6 {
   top: -10px;
   left: 50%;
   transform: translate(-50%, -100%);
-  background: #7A73D1;
-  color: #fff;
-  padding: 8px 12px;
-  border-radius: 4px;
+  background: rgba(45, 45, 45, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(122, 115, 209, 0.3);
+  color: #e0e0e0;
+  padding: 12px 16px;
+  border-radius: 8px;
   font-size: 0.9rem;
+  font-weight: 500;
   opacity: 0;
-  transition: opacity 0.2s, transform 0.2s;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
 }
 .edu-item::before {
   content: "";
@@ -467,15 +472,16 @@ h1, h2, h3, h4, h5, h6 {
   top: -6px;
   left: 50%;
   transform: translateX(-50%);
-  border: 6px solid transparent;
-  border-top-color: #7A73D1;
+  border: 8px solid transparent;
+  border-top-color: rgba(45, 45, 45, 0.85);
   opacity: 0;
-  transition: opacity 0.2s;
+  transition: opacity 0.3s ease;
+  z-index: 999;
 }
 .edu-item:hover::after,
 .edu-item:hover::before {
   opacity: 1;
-  transform: translate(-50%, -110%);
+  transform: translate(-50%, -115%);
 }
 
 /* SKILLS SECTION */
