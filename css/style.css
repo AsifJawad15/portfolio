@@ -493,35 +493,93 @@ h1, h2, h3, h4, h5, h6 {
   grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
   gap: 40px;
 }
+
+.skill-box {
+  background: rgba(45, 45, 45, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(122, 115, 209, 0.2);
+  border-radius: 12px;
+  padding: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 191, 255, 0.2), 0 0 20px rgba(138, 43, 226, 0.1);
+  border-color: rgba(122, 115, 209, 0.4);
+}
+
 .skill-box h3 {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   background: linear-gradient(45deg, #00bfff, #8a2be2, #9932cc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-weight: 600;
+  font-size: 1.3rem;
 }
 .skill {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  position: relative;
 }
+
 .skill span {
-  display: block;
-  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
   color: #e0e0e0;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.skill span::after {
+  content: attr(data-percent);
+  color: #00bfff;
+  font-weight: 600;
+  font-size: 0.9rem;
 }
 .skill-bar {
-  background: #3d3d3d;
-  border-radius: 4px;
+  background: #2d2d2d;
+  border-radius: 8px;
   overflow: hidden;
-  border: 1px solid #555;
+  border: 1px solid #444;
+  position: relative;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-
 .skill-per {
-  width: 0;              /* start collapsed */
-  height: 8px;
-  background: linear-gradient(90deg, #7A73D1, #B5A8D5);
-  transition: width 1.2s ease-out;
+  width: 0;
+  height: 12px;
+  background: linear-gradient(45deg, #00bfff, #8a2be2, #9932cc);
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease infinite;
+  transition: width 1.5s ease-out;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-per::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
 }
 
 /* when we add .fill to .skill-per, it will animate to the target */

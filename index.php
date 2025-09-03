@@ -116,7 +116,7 @@ while ($r = $res->fetch_assoc()) {
           <h3><?php echo htmlspecialchars($category); ?></h3>
           <?php foreach ($items as $skill): ?>
             <div class="skill">
-              <span><?php echo htmlspecialchars($skill['name']); ?></span>
+              <span data-percent="<?php echo (int)$skill['percentage']; ?>%"><?php echo htmlspecialchars($skill['name']); ?></span>
               <div class="skill-bar">
                 <div class="skill-per" data-per="<?php echo (int)$skill['percentage']; ?>%"></div>
               </div>
