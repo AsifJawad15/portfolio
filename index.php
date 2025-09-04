@@ -57,7 +57,7 @@ while ($r = $res->fetch_assoc()) {
   
   <!-- ABOUT SECTION -->
   <section id="about" class="about">
-    <h2 class="section-title">About Me</h2>
+    <h2 class="section-title"><i class='bx bx-user'></i> About Me</h2>
     <div class="about-content">
       <!-- Left side - Text content -->
       <div class="about-text">
@@ -84,7 +84,7 @@ while ($r = $res->fetch_assoc()) {
   </section>
  <!-- EDUCATION SECTION -->
   <section class="education">
-    <h2 class="section-title">Education</h2>
+    <h2 class="section-title"><i class='bx bx-graduation'></i> Education</h2>
     <div class="education-grid">
       <div class="edu-item"
            data-title="Khulna Zilla School"
@@ -106,7 +106,7 @@ while ($r = $res->fetch_assoc()) {
   </section>
  <!-- SKILLS SECTION -->
 <section id="skills" class="skills">
-  <h2 class="section-title">My Skills</h2>
+  <h2 class="section-title"><i class='bx bx-code-alt'></i> My Skills</h2>
   <div class="skills-content">
     <?php if (empty($skills_by_cat)): ?>
       <p style="text-align:center">No skills added yet.</p>

@@ -312,6 +312,24 @@ form button:hover {
   background-clip: text;
   margin: 60px 0 20px;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.section-title i {
+  font-size: 2.2rem;
+  background: linear-gradient(45deg, #00bfff, #8a2be2, #9932cc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: iconPulse 2s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
 }
 
 /* ALL HEADINGS GRADIENT */
